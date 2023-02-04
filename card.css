@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(to right, #000000, #ff69b4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-face, .right-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 10px 10px 20px #888888;
+}
+
+.left-face {
+  left: -110px;
+  background-image: url(ana.png);
+  animation: slide-left 4s ease-in-out infinite;
+}
+
+.right-face {
+  right: -110px;
+  background-image: url(me.png);
+  animation: slide-right 4s ease-in-out infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.message {
+  font-family: 'Brush Script MT', cursive;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #888888;
+}
+
+#gilly {
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#gilly img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#gilly h1 {
+  font-family: 'Brush Script MT', cursive;
+  margin-top: 1em;
+}
