@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will You Be My Valentine?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+  <link rel ="stylesheet" href ="card.css">
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="anaSong.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="container">
+    <div class="left-face"></div>
+    <div class="right-face"></div>
+    <h1 class="message">Will You Be My Valentine?</h1>
+  </div>
+  <div id="gilly" style="display:none; position: absolute; top:-300px; left:50%; transform:translateX(-50%); text-align:center;">
+    <img src="gilly.png" alt="ana">
+    <h1 style="font-family: 'Brush Script MT', cursive;">Please?</h1>
+  </div>
+  
+  <script>
+    setTimeout(function() {
+      document.getElementById("gilly").style.display = "block";
+      document.getElementById("gilly").animate([      { top: "-300px" },      { top: "50%" }    ], {
+        duration: 40000,
+        easing: "ease-out",
+        fill: "forwards"
+      });
+    }, 10000);
+  </script>
+
+  <!-- Your JavaScript code goes here -->
+</body>
+</html>
